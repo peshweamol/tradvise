@@ -1,0 +1,39 @@
+{
+  "name": "tradvise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peshweamol/tradvise.git"
+  },
+  "keywords": [
+    "Trade-Calls",
+    "Trading",
+    "Forex",
+    "Stocks"
+  ],
+  "author": "Abhijeet Bhagat and Amol Peshwe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peshweamol/tradvise/issues"
+  },
+  "homepage": "https://github.com/peshweamol/tradvise#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.9"
+  }
+}

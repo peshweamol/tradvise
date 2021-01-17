@@ -1,2 +1,3 @@
-# tradvise
-Trade Calls APP
+# tradecalls
+
+This is a trading calls application
